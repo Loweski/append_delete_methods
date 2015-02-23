@@ -1,0 +1,50 @@
+// append_delete project main.go
+package main
+
+import (
+	"fmt"
+)
+
+type student struct {
+	name   string
+	course string
+}
+
+// STRUCTS (TYPES) CAN CONTAIN METHODS
+func (c student) listcourse() {
+	fmt.Println(c.name + " is in " + c.course + ".")
+}
+
+func (c student) returnname() string {
+	return c.name
+}
+
+func main() {
+	/*	var courseList []string
+		courseList = make([]string, 2, 4)
+		courseList[0] = "Csci 112"
+		courseList[1] = "Csci 115"
+		courseList = append(courseList, "Csci 126")
+		courseList = append(courseList, "Csci 130")
+		fmt.Println(courseList[0])
+		fmt.Println(courseList[1])
+		fmt.Println(courseList[2])
+		fmt.Println(courseList[3])
+
+		fmt.Println("-------------------")
+		courseList = append(courseList[:2], courseList[3])
+		fmt.Println(courseList[0])
+		fmt.Println(courseList[1])
+		fmt.Println(courseList[2])
+
+		fmt.Println("-------------------")*/
+
+	var student1 = student{"Leng", "Csci 130"}
+	fmt.Println("Name: " + student1.name)
+	fmt.Println("Class: " + student1.course)
+	// STRUCTS (TYPES) CAN USE METHODS
+	student1.listcourse()
+
+	fmt.Println("Again, the student name is" + student1.returnname() + ".")
+
+}
