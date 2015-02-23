@@ -1,4 +1,6 @@
 // append_delete project main.go
+//Leng Vang Csci 130
+
 package main
 
 import (
